@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:newsie/view/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,16 +12,14 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  // void initState() {
-  //   super.initState();
-  //   Timer(
-  //     const Duration(seconds: 3),
-  //         () => Navigator.pushReplacement(
-  //       context,
-  //       MaterialPageRoute(builder: (context) => const HomePage()),
-  //     ),
-  //   );
-  // }
+  void initState() {
+    super.initState();
+    Timer(
+      const Duration(seconds: 3),
+          () => Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => HomeScreen(),)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontFamily: 'Monument Extended Regular',
-                  fontSize: 26,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff3E3835),
                   height: 2.2,
@@ -60,8 +59,9 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-          SpinKitCircle(
-            color: Color(0xff3E3835),size: 40,
+
+          SpinKitCircle (
+            color: Color(0xff3E3835),size: 50,
           ),
         ],
       ),
